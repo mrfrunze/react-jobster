@@ -1,12 +1,11 @@
-import './App.css'
+import { Landing } from "./pages"
 
 function App() {
 
   return (
     <>
-     
-      <h1>Vite + React</h1>
-     
+      <h1>Jonster Dev</h1>
+      <Landing />
     </>
   )
 }
