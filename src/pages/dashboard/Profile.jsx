@@ -24,6 +24,7 @@ const Profile = () => {
             toast.error('Please Fill Out All Fields');
             return;
         }
+        // console.log(dispatch(updateUser(userData)));
         dispatch(updateUser(userData));
     }
 
@@ -37,6 +38,7 @@ const Profile = () => {
         <Wrapper>
             <form className='form' onSubmit={handleSubmit}>
                 <h3>profile</h3>
+
                 <div className='form-center'>
                     <FormRow
                         type='text'
@@ -63,11 +65,8 @@ const Profile = () => {
                         value={userData.location}
                         handleChange={handleChange}
                     />
-                    <button className='btn btn-block' 
-                        type='button'  
-                        disabled={isLoading}
-                    >
-                        {isLoading ? 'Please Wait...' : 'Save Changes'}
+                    <button className='btn btn-block' type='submit' >
+                        {isLoading ? 'Please Wait...' : 'save changes'}
                     </button>
                 </div>
             </form>
